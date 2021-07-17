@@ -2,10 +2,6 @@ from multiprocessing import Process, Pool
 from collections import deque
 from threading import Thread
 
-# Using thread because I don't want to manage shared variable
-# If using MP, the shared variable in class (e.g. self.VAR) will be copied to the new memory space, any modification
-# to those self.VAR will be lost
-
 
 class ThreadHandler:
     def __init__(self, fn, args, max_threads, bar=None):
